@@ -1,0 +1,20 @@
+<%= form_for :user do |f| %>
+<fieldset id="formulario">
+  <legend>Nuevo Registro</legend>
+   <p> 
+     <%= f.label :nombre %>
+     <%=f.text_field :nombre %>
+   </P>
+   <p>
+     <%= f.label :email %>
+     <%=f.email_field :email %>
+   </P>
+   <p>
+   <%= f.label :password %>
+   <%=f.password_field :password %>
+   </P>
+   <p>
+   <%=f.submit "Guardar" %>
+   </p>
+ </fieldset>
+<% end %>

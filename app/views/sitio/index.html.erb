@@ -1,0 +1,14 @@
+
+<%=flash[:notice]%>
+<%= form_for :cate do |f| %>
+<fieldset id="formulario">
+  <legend>Categorias</legend>
+   <p> 
+     <%= f.label :texto %>
+     <%= f.text_area :texto ,:cols =>"100" , :rows => "15"%>
+   </P>
+     <p>
+   <%=f.submit "Enviar" %>
+   </p>
+ </fieldset>
+<% end %>

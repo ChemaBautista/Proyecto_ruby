@@ -1,0 +1,18 @@
+<%=flash[:notice]%>
+<%= form_for :user do |f| %>
+<fieldset id="formulario">
+  <legend>Login</legend>
+   <p> 
+     <%= f.label :nombre %>
+     <%=f.text_field :nombre %>
+   </P>
+   <p>
+   <%= f.label :password %>
+   <%=f.password_field :password %>
+   </P>
+   <p>
+   <%=f.submit "Entrar" %>
+   </p>
+
+ </fieldset>
+<% end %>

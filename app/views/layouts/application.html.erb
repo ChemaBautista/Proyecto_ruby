@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=@titulo %></title>
+  <%= stylesheet_link_tag :estilos %>
+   <%= stylesheet_link_tag :reset %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="pagina">
+   <div id="cabecera">
+     Projecto Final
+   </div>
+   <div id="menu">
+     <%=enlace "Inicio",home_url%>
+     <%=enlace "Registro",registro_url%>
+    <%=enlace "Integrantes",quienes_url%>
+         <%=enlace "Ayuda",ayuda_url%>
+         <%=enlace "Login",login_url%>
+
+   </div>
+   <div id="contenido">
+    <%= yield %> 
+   </div>
+</div>
+</body>
+</html>
