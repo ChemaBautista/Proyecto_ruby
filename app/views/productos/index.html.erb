@@ -1,0 +1,11 @@
+<h1>Lista de productos</h1>
+          <% @productos.each do |p| %>
+     <p>
+            <%= p.titulo %>
+            <%= p.descripcion %>
+            <%= p.imagen %>
+       
+    </p> 
+  <%  end %>
+
+<%= link_to "Agregar Nuevo" ,:action=>"new" %>

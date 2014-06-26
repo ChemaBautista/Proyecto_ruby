@@ -1,0 +1,16 @@
+<h1>Agregar Productos</h1>
+<%= form_for :prod do |f| %>
+<p>
+    <%=f.label "Titulo"%>
+    <%=f.text_field :titulo%>
+ </p>
+<p>
+    <%=f.label "Descripcion"%>
+    <%=f.text_field :descripcion%>
+ </p>
+<p>
+    <%=f.label "Imagen"%>
+    <%=f.text_field :imagen%>
+ </p>
+<%= f.submit"Guardar" %>
+<%end%>

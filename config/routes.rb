@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'productos/index'
+
+  get 'productos/new'
+  post'productos/new'
+  get 'productos/edit'
+
+  get 'productos/delet'
+
+  get 'productos/search'
+
   post 'registro/index'
   get 'registro/index'
   get 'sitio/index'
@@ -18,7 +28,9 @@ Rails.application.routes.draw do
     match "/quienes"=>"sitio#quienes",:as =>:quienes ,via:[:get]
     match "/home"=>"sitio#index",:as =>:home ,via:[:get,:post]
     match "/login"=>"registro#login",:as =>:login ,via:[:get,:post]
-
+   match  "/listaproductos"=>"productos#index",:as =>:listaproductos ,via:[:get]
+   match  "/clasificar"=>"productos#search",:as =>:clasificar,via:[:get,:post]   
+  match  "/nuevoproducto"=>"productos#new",:as =>:nuevoproducto,via:[:get,:post]                                                            
  # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
